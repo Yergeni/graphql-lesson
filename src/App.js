@@ -10,7 +10,7 @@ import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 
-import Header from './components/header/header.component';
+import { default as Header } from './components/header/header.container';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
@@ -35,7 +35,7 @@ class App extends React.Component {
         });
       }
 
-      setCurrentUser(userAuth);
+      setCurrentUser(userAuth); // User to null since "userAuth" will be null at this point 
     });
   }
 
